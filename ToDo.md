@@ -5,4 +5,14 @@ Used in this project:
 3. Python
 
 ## To do list
-- [ ] Create files 
+- [x] Create files 
+- [X] Set up a basic html website that will use LaTex
+- [ ] Set up the main.py
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
