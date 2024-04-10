@@ -7,6 +7,8 @@ Used in this project:
 ## To do list
 **Whole project:**
 - [x] Create files 
+- [ ] Set up the front end
+- [ ] Set up the back end
 
 
 **Backend:**
