@@ -3,9 +3,9 @@ import numpy as np
 
 from matplotlib.widgets import TextBox
 
-import Frontend.graphing
-import Frontend.derivatives
-import Frontend.integration
+# import Frontend.graphing
+# import Frontend.derivatives
+# import Frontend.integration
 
 """ 
 i.e. "x^2 + 3x - 4 = y" --> x**2 + 3 * x - 4 = y
@@ -30,25 +30,30 @@ polynomial
 def identify(euqation: str) -> int:
     #polynomial, exponential, logarithmic, 
     pass
-    
+
 
 
 def main():
-    print()
-    inEqn = input("please input your equation here: ")
-    rawCommand = input("would you like to derive or integrate your equation? ")
 
-    command = sanitize(rawCommand)
-    
-    if (isValid(inEqn)):
-        print(f"\'{inEqn}\' is invalid please enter again: ")
-    
-    #identify the type of equation: i.e polynomial, trigonometric, hyperbolic etc.
-    if identify(inEqn) == 1:
-        pass
+    # testing setting up connection between server and logic
+    print("Hello World!")
 
-    if "deriv" in command: 
-        print("poo")
+    ''' UnComment when finished creating the connection
+    # inEqn = input("please input your equation here: ")
+    # rawCommand = input("would you like to derive or integrate your equation? ")
+
+    # command = sanitize(rawCommand)
+    
+    # if (isValid(inEqn)):
+    #     print(f"\'{inEqn}\' is invalid please enter again: ")
+    
+    # #identify the type of equation: i.e polynomial, trigonometric, hyperbolic etc.
+    # if identify(inEqn) == 1:
+    #     pass
+
+    # if "deriv" in command: 
+    #     print("poo")
+    '''
 
 
 if __name__ == "__main__":
