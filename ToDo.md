@@ -14,7 +14,6 @@ Used in this project:
 **Backend:**
 - [X] Set up a basic html website that will use LaTex
 - [ ] Set up a basic PHP website that will be able to take in user input 
-- [ ] 
 
 **Frontend:**
 - [ ] Set up the main.py

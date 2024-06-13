@@ -3,10 +3,9 @@ import numpy as np
 
 from matplotlib.widgets import TextBox
 
-import functions
-import graphing
-import derivatives
-import integration
+import Frontend.graphing
+import Frontend.derivatives
+import Frontend.integration
 
 """ 
 i.e. "x^2 + 3x - 4 = y" --> x**2 + 3 * x - 4 = y
