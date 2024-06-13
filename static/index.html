@@ -3,16 +3,17 @@
 <head>
   <title>My AJAX App</title>
 </head>
+
 <body>
-  <button id="fetch-button">Fetch Data</button>
-  <p id="message"></p>
+  <button id="fetch-button">Submit Equation</button>
+  <p id="Equation"></p>
 
   <script>
     document.getElementById('fetch-button').addEventListener('click', function() {
       fetch('/api/data')
         .then(response => response.json())
         .then(data => {
-          document.getElementById('message').textContent = data.msg;
+          document.getElementById('Equation').textContent = data.msg;
         });
     });
   </script>
