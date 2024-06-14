@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>WebSite App</title>
-</head>
-<form id="getEqn">
-  <label for="equation">Equation:</label>
-  <input type="text" id="inEqn" name="equation"> <br>
-  <button type="submit" id="fetch-button">Submit</button>
-<form>
-<body>
-  <script>
-    document.getElementById('fetch-button').addEventListener('click', function(event) {
-      event.preventDefault(); 
-      var eqn = document.getElementById('inEqn').value;
-      const data = {"equation": eqn};
-      const jsonData = JSON.stringify(data)
-      const headers = {
-        'Content-Type': 'application/json'
-      };
+  <head>
+    <title>WebSite App</title>
+  </head>
+  <body>
+    <form id="getEqn">
+      <label for="equation">Equation:</label>
+      <input type="text" id="inEqn" name="equation" /> <br />
+      <button type="submit" id="fetch-button">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script>
+      document
+        .getElementById("fetch-button")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          var eqn = document.getElementById("inEqn").value;
+          const data = { equation: eqn };
+          const jsonData = JSON.stringify(data);
+          const headers = {
+            "Content-Type": "application/json",
+          };
 
-      console.log("sending data", jsonData)
+          console.log("sending data", jsonData);
 
-      fetch('/derivative', {
-        method: 'POST',
-        headers: headers,
-        body: jsonData
-      })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error', error));
-    });
-  </script>
-</body>
+          fetch("/derivative", {
+            method: "POST",
+            headers: headers,
+            body: jsonData,
+          })
+            .then(response => response.json())
+            .then(data => document.getElementById("result").innerHTML = JSON.stringify(data["ans"]))
+            .catch(error => console.error("Error", error));
+        });
+    </script>
+  </body>
 </html>

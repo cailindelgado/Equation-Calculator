@@ -1,6 +1,6 @@
 from flask import *
 import json
-# import main
+from logic import main as foo
 
 app = Flask(__name__, static_folder='../static', static_url_path='/')
 
@@ -9,6 +9,7 @@ def handle():
     data = request.json
     print(data)
     # eqnJSON = {"eqn": "Equation recieved" + eqn}
+    foo.turd()
     return jsonify({"ans": "2"})
 
 @app.route('/')
