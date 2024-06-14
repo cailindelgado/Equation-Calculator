@@ -1,10 +1,10 @@
 from flask import *
-import json
 from logic import main as foo
 
-app = Flask(__name__, static_folder='../static', static_url_path='/')
+app = Flask(__name__, static_folder="../static", static_url_path="/")
 
-@app.route('/derivative', methods=['POST'])
+
+@app.route("/derivative", methods=["POST"])
 def handle():
     data = request.json
     print(data)
@@ -12,10 +12,11 @@ def handle():
     foo.turd()
     return jsonify({"ans": "2"})
 
-@app.route('/')
+
+@app.route("/")
 def index():
-    return app.send_static_file('index.html')
+    return app.send_static_file("index.html")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(host="localhost")
