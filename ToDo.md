@@ -7,9 +7,9 @@ Used in this project:
 ## To do list
 **Whole project:**
 - [x] Create files 
+- [ ] Create a connection between the  logic of the program and the HTML website 
 - [ ] Set up the front end
 - [ ] Set up the back end
-
 
 **Backend:**
 - [X] Set up a basic html website that will use LaTex

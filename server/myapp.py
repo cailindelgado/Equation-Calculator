@@ -1,12 +1,15 @@
 from flask import *
 import json
+# import main
 
 app = Flask(__name__, static_folder='../static', static_url_path='/')
 
-@app.route('/api/data')
-def cats():
-    data = {"msg": "i am a cat"}
-    return json.dumps(data)
+@app.route('/derivative', methods=['POST'])
+def handle():
+    data = request.json
+    print(data)
+    # eqnJSON = {"eqn": "Equation recieved" + eqn}
+    return jsonify({"ans": "2"})
 
 @app.route('/')
 def index():
