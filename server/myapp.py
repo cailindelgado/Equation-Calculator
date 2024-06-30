@@ -1,5 +1,5 @@
 from flask import *
-from logic import main as foo
+from logic import logicHandler as foo
 
 app = Flask(__name__, static_folder="../static", static_url_path="/")
 
@@ -9,7 +9,7 @@ def handle():
     data = request.json
     print(data)
     # eqnJSON = {"eqn": "Equation recieved" + eqn}
-    foo.turd()
+    foo.equationHandler()
     return jsonify({"ans": "2"})
 
 
