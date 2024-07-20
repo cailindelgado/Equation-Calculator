@@ -1,9 +1,11 @@
 import pytest
 import logic_handler as lh
 
+
 def test_equation_handler_1():
     with pytest.raises(lh.ParseError):
         lh.equationHandler(")/(")
+
 
 # print(equationHandler(")/(") + "\n")
 # print(equationHandler("4x + (3x^2)^2 + 1") + "\n")

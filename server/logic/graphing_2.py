@@ -3,13 +3,14 @@ import numpy as np
 
 from matplotlib.widgets import TextBox
 
-#https://matplotlib.org/stable/gallery/widgets/textbox.html
+# https://matplotlib.org/stable/gallery/widgets/textbox.html
 
 fig, ax = plt.subplots()
-fig.subplots_adjust(bottom=.2)
+fig.subplots_adjust(bottom=0.2)
 
-t = np.arange(-2.0, 2.0, .001)
-l, = ax.plot(t, np.zeros_like(t), lw=2)
+t = np.arange(-2.0, 2.0, 0.001)
+(l,) = ax.plot(t, np.zeros_like(t), lw=2)
+
 
 def submit(expression):
     """
@@ -18,7 +19,7 @@ def submit(expression):
     *expression* is a string using "t" as its independent variable, e.g.
     "t ** 3".
     """
-    ydata = eval(expression, {'np': np}, {'t': t})
+    ydata = eval(expression, {"np": np}, {"t": t})
     l.set_ydata(ydata)
     ax.relim()
     ax.autoscale_view()
